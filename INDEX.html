@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script>
+           
+                //For browsers that don't support the addEventListener() method, you can use the attachEvent() method                 
+                var button = document.getElementById("About");
+                if (document.addEventListener)
+                {
+                     button.addEventListener("click", About, false);
+                    
+                    } else if (document.attachEvent)
+                    {
+                        button.attachEvent("click" , About,false) 
+                    }                                          
+                           
+                function About()
+                {
+                    alert("hi there");
+                }
+           
+        </script>        
+         <script>
+        document.addEventListener("click", myFunction);
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+ </script>
+
+    </head>
+    <body>
+        <input  id="About" type="button" value="About" onclick="About();" >
+        <p id="demo"></p>
+    </body>
+</html>
